@@ -16,7 +16,7 @@ public class Solution {
             
             if (taken[idx]) continue;
             
-            while (!st.isEmpty() && s.charAt(i) < st.peek() && lastIndex[st.peek() - 'a'] > i) {
+            while (!st.isEmpty() && s.charAt(i) < st.peek() && lastIndex[st.peek() - 'a'] >= i) {
                 taken[st.pop() - 'a'] = false;
             }
             
