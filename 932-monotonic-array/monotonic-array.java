@@ -4,9 +4,10 @@ class Solution {
         for(int i = 0;i<nums.length-1;i++){
             if(nums[i]<nums[i+1])flag1= true;
             else if(nums[i]>nums[i+1])flag2 = true;
+            if(flag1 && flag2)return false;
             
         }
-        if(flag1 && flag2)return false;
+      
         return true;
 
     }
