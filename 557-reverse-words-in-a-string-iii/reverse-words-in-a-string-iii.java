@@ -1,17 +1,17 @@
 class Solution {
     public String reverseWords(String s) {
         int n = s.length();
-        String ans = "";
-        String temp = "";
+        StringBuilder ans = new StringBuilder();
+        StringBuilder temp = new StringBuilder();
         for(int i = 0;i<n;i++){
             if(s.charAt(i) == ' '){
-                ans+= temp + " ";
-                temp = "";
+                ans.append(temp.reverse() + " " );
+                temp = new StringBuilder();
             }
             else{
-                temp = s.charAt(i) + temp;
+                temp.append(s.charAt(i));
             }
        }
-       return ans + temp;
+       return ans.append(temp.reverse()).toString();
     }
 }
