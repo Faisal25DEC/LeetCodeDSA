@@ -12,15 +12,15 @@ class Solution {
         }
        
 
-        //travel array prefix sum
-        int []tps = new int[n];
+        
+        int []travelPrefix = new int[n];
         for(int i = 0;i<n;i++){
-            if(i == 0)tps[i] = 0;
-            else tps[i] = tps[i-1] + travel[i-1];
+            if(i == 0)travelPrefix[i] = 0;
+            else travelPrefix[i] = travelPrefix[i-1] + travel[i-1];
         }
 
 
-       return(tps[li[0]] + tps[li[1]] + tps[li[2]] + gpt);
+       return(travelPrefix[li[0]] + travelPrefix[li[1]] + travelPrefix[li[2]] + gpt);
        
         
     }
