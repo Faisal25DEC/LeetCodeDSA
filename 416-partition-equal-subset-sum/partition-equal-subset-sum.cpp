@@ -14,6 +14,7 @@ public:
     bool canPartition(vector<int>& nums) {
         int sum = 0;
         for(int num:nums)sum+=num;
+        if(sum%2)return false;
         vector<vector<int>> dp(nums.size(),vector<int>(sum+1,-1));
         return solve(nums,0,sum,0,dp);
     }
